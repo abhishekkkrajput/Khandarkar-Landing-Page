@@ -20,22 +20,22 @@ const Navbar: React.FC = () => {
         <div className="flex items-center gap-3 group cursor-pointer">
           <div className="relative flex items-center h-10 w-12 translate-y-1">
             {/* Dark Blue Heart */}
-            <Heart 
-                className="absolute left-0 bottom-1 w-6 h-6 fill-[#1E3A8A] text-[#1E3A8A] transform -rotate-12 transition-transform group-hover:scale-110" 
+            <Heart
+              className="absolute left-0 bottom-1 w-6 h-6 fill-[#1E3A8A] text-[#1E3A8A] transform -rotate-12 transition-transform group-hover:scale-110"
             />
             {/* Magenta Heart */}
-            <Heart 
-                className="absolute right-0 top-0 w-8 h-8 fill-[#B6337D] text-[#B6337D] transform rotate-12 drop-shadow-md transition-transform group-hover:scale-110" 
+            <Heart
+              className="absolute right-0 top-0 w-8 h-8 fill-[#B6337D] text-[#B6337D] transform rotate-12 drop-shadow-md transition-transform group-hover:scale-110"
             />
           </div>
-          
+
           <div className="flex flex-col ml-1">
             <h1 className="text-3xl font-bold tracking-tight flex items-baseline" style={{ fontFamily: 'Montserrat, sans-serif' }}>
               <span className="text-[#1E3A8A]">Khandar</span>
               <span className="text-[#B6337D]">Kar</span>
             </h1>
             <span className={`text-[10px] font-bold uppercase tracking-[0.3em] mt-[-4px] transition-colors duration-300 ${scrolled ? 'text-gray-500' : 'text-white/90'}`}>
-                Sacred Bond of Nikah
+              Sacred Bond of Nikah
             </span>
           </div>
         </div>
@@ -51,21 +51,25 @@ const Navbar: React.FC = () => {
           </a>
 
           {/* Download App - NOW PRIMARY (More Highlighted) */}
-          <button className={`flex items-center gap-3 px-6 py-3 rounded-2xl transition-all group shadow-lg hover:shadow-[#B6337D]/30 active:scale-95 bg-[#B6337D] text-white`}>
-            <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" 
-                alt="Play Store" 
-                className="w-5 h-5 brightness-0 invert"
+          <a
+            href="https://play.google.com/store/apps/details?id=com.khandarkar.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex items-center gap-3 px-6 py-3 rounded-2xl transition-all group shadow-lg hover:shadow-[#B6337D]/30 active:scale-95 bg-[#B6337D] text-white`}
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg"
+              alt="Play Store"
+              className="w-5 h-5 brightness-0 invert"
             />
             <span className="text-[11px] font-black uppercase tracking-widest">Download App</span>
-          </button>
+          </a>
 
           {/* Continue on web app - NOW SECONDARY (Less Highlighted) */}
-          <button className={`px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-[0.1em] transition-all border ${
-            scrolled 
-              ? 'border-[#1E3A8A] text-[#1E3A8A] hover:bg-[#1E3A8A]/5' 
+          <button className={`px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-[0.1em] transition-all border ${scrolled
+              ? 'border-[#1E3A8A] text-[#1E3A8A] hover:bg-[#1E3A8A]/5'
               : 'border-white/30 text-white hover:bg-white/10'
-          }`}>
+            }`}>
             Continue on web app
           </button>
         </div>
