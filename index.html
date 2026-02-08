@@ -4,8 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Khandarkar - The Premium Matrimonial Platform for Kashmiri Muslims. Find your perfect match with privacy, dignity, and tradition. Verified profiles, blessed unions.">
+    <meta name="keywords"
+        content="Kashmiri Matrimony, Nikah, Muslim Marriage, Kashmir, Khandarkar, Rishta, Matchmaking">
+    <meta property="og:title" content="Khandarkar | Sacred Kashmiri Nikah">
+    <meta property="og:description"
+        content="Begin your journey to a blessed union. The most trusted and premium matrimonial service in Kashmir.">
+    <meta property="og:image" content="/images/preview-card.png">
     <title>KHANDARKAR | Sacred Kashmiri Nikah</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        'gold-light': '#F5E0A3',
+                        brand: '#B6337D',
+                        'brand-dark': '#8E1F5D',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                        cinzel: ['Cinzel', 'serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 60px -15px rgba(212, 175, 55, 0.2)',
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,22 +47,7 @@
             scroll-behavior: smooth;
         }
 
-        h1,
-        h2,
-        h3,
-        .font-serif {
-            font-family: 'Playfair Display', serif;
-        }
-
-        .font-cinzel {
-            font-family: 'Cinzel', serif;
-        }
-
-        .gold-gradient {
-            background: linear-gradient(135deg, #D4AF37 0%, #F5E0A3 50%, #D4AF37 100%);
-        }
-
-        .text-gold {
+        .text-gold-gradient {
             background: linear-gradient(135deg, #D4AF37 0%, #F5E0A3 50%, #D4AF37 100%);
             -webkit-background-clip: text;
             background-clip: text;

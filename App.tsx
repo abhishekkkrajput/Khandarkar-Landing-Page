@@ -6,7 +6,7 @@ import Features from './components/Features';
 import About from './components/About';
 
 import AppShowcase from './components/AppShowcase';
-import Testimonials from './components/Testimonials';
+
 import Footer from './components/Footer';
 import FloatingChinar from './components/FloatingChinar';
 
@@ -38,9 +38,7 @@ const App: React.FC = () => {
           <AppShowcase />
         </section>
 
-        <section id="testimonials" className="py-24 bg-white">
-          <Testimonials />
-        </section>
+
 
         <section id="cta" className="relative py-40 flex items-center justify-center overflow-hidden">
           {/* Background Image: Kashmiri Valley matching the request */}
@@ -105,7 +103,7 @@ const App: React.FC = () => {
         </section>
       </main>
       <Footer />
-    </div>
+    </div >
   );
 };
 

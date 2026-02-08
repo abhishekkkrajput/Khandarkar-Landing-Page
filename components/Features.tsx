@@ -1,59 +1,68 @@
 
 import React from 'react';
-import { WalnutPattern } from '../constants';
 import { UserCheck, ShieldCheck, Heart, Users } from 'lucide-react';
 
 const features = [
   {
-    title: "Exclusive to Kashmiri Muslims",
-    description: "A niche sanctuary designed specifically for our unique cultural sensibilities and values.",
-    icon: <Users className="w-8 h-8 text-[#D4AF37]" />,
+    title: "Exclusively Kashmiri",
+    description: "A sanctuary crafted solely for our community. We understand the nuance of every caste, creed, and valley tradition.",
+    icon: <Users className="w-8 h-8 text-white" />,
+    gradient: "from-[#B6337D] to-[#8E1F5D]"
   },
   {
-    title: "Sacred & Respectful Matchmaking",
-    description: "Built on the principles of Nikah, ensuring every interaction is dignified and pure.",
-    icon: <Heart className="w-8 h-8 text-[#D4AF37]" />,
+    title: "Halal & Dignified",
+    description: "Built upon the Sunnah. No swiping, no casual dating—just sincere families seeking endless unions.",
+    icon: <Heart className="w-8 h-8 text-white" />,
+    gradient: "from-[#D4AF37] to-[#B8860B]"
   },
   {
-    title: "Verified Profiles & Real Families",
-    description: "A robust verification process that connects genuine individuals and sincere families.",
-    icon: <UserCheck className="w-8 h-8 text-[#D4AF37]" />,
+    title: "100% Verified Souls",
+    description: "Every profile is manually vetted. We ensure you meet real people with genuine intentions, not bots.",
+    icon: <UserCheck className="w-8 h-8 text-white" />,
+    gradient: "from-[#1E3A8A] to-[#0F172A]"
   },
   {
-    title: "Privacy, Dignity, Trust First",
-    description: "Advanced safety features giving you full control over who sees your journey.",
-    icon: <ShieldCheck className="w-8 h-8 text-[#D4AF37]" />,
+    title: "Ironclad Privacy",
+    description: "Your family's honor is our Amanaah. Photos and details are only shared with your explicit consent.",
+    icon: <ShieldCheck className="w-8 h-8 text-white" />,
+    gradient: "from-[#10B981] to-[#047857]"
   },
 ];
 
 const Features: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto px-6 relative">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-serif text-[#B6337D] mb-4 uppercase tracking-wider">Why <span className="text-gold">Khandarkar</span></h2>
-        <div className="h-1 w-24 gold-gradient mx-auto mb-6"></div>
-        <p className="text-gray-600 max-w-2xl mx-auto">Beyond simple algorithms, we offer a bridge to a blessed future rooted in our heritage.</p>
+    <div className="max-w-7xl mx-auto px-6 relative py-12">
+      {/* Section Header */}
+      <div className="text-center mb-20">
+        <span className="text-[#D4AF37] font-cinzel tracking-[0.3em] text-xs uppercase font-bold">The Gold Standard</span>
+        <h2 className="text-4xl md:text-6xl font-serif text-[#1E3A8A] mt-4 mb-6">
+          Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B6337D] to-[#D4AF37]">Khandarkar</span>?
+        </h2>
+        <div className="h-[1px] w-32 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto"></div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map((f, idx) => (
-          <div key={idx} className="group relative bg-[#F9F9F9] p-8 rounded-2xl border border-gray-100 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 opacity-5 transition-opacity group-hover:opacity-10 pointer-events-none">
-                <WalnutPattern />
-            </div>
-            
-            <div className="relative z-10">
-                <div className="w-16 h-16 bg-[#B6337D] rounded-2xl flex items-center justify-center mb-6 shadow-xl transform rotate-3 transition-transform group-hover:rotate-0">
-                    {f.icon}
-                </div>
-                <h3 className="text-xl font-bold text-[#4A2F22] mb-4 leading-tight group-hover:text-[#B6337D] transition-colors">
-                    {f.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed text-sm">
-                    {f.description}
-                </p>
-                
-                <div className="mt-6 w-10 h-1 bg-[#D4AF37] transition-all duration-500 group-hover:w-full"></div>
+          <div
+            key={idx}
+            className="group relative bg-white rounded-[2rem] p-8 border border-gray-100 hover:border-[#D4AF37]/30 transition-all duration-500 hover:shadow-premium hover:-translate-y-2 overflow-hidden"
+          >
+            {/* Hover Gradient Background */}
+            <div className={`absolute inset-0 bg-gradient-to-br ${f.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+
+            <div className="relative z-10 flex flex-col items-center text-center">
+              {/* Icon Container */}
+              <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${f.gradient} flex items-center justify-center mb-8 shadow-lg transform group-hover:rotate-12 transition-transform duration-500`}>
+                {f.icon}
+              </div>
+
+              <h3 className="text-xl font-serif font-bold text-[#1E3A8A] mb-4 group-hover:text-[#B6337D] transition-colors">
+                {f.title}
+              </h3>
+
+              <p className="text-gray-600 text-sm leading-relaxed font-light">
+                {f.description}
+              </p>
             </div>
           </div>
         ))}
