@@ -42,11 +42,11 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-8">
-          <a href="#about" className={`text-xs font-black transition-colors tracking-[0.15em] uppercase ${scrolled ? 'text-gray-800 hover:text-[#B6337D]' : 'text-white hover:text-gold'}`}>
+          <a href="https://khandarkar.com/about" target="_blank" rel="noopener noreferrer" className={`text-xs font-black transition-colors tracking-[0.15em] uppercase ${scrolled ? 'text-gray-800 hover:text-[#B6337D]' : 'text-white hover:text-gold'}`}>
             About
           </a>
 
-          <a href="#footer" className={`text-xs font-black transition-colors tracking-[0.15em] uppercase ${scrolled ? 'text-gray-800 hover:text-[#B6337D]' : 'text-white hover:text-gold'}`}>
+          <a href="https://khandarkar.com/contact" target="_blank" rel="noopener noreferrer" className={`text-xs font-black transition-colors tracking-[0.15em] uppercase ${scrolled ? 'text-gray-800 hover:text-[#B6337D]' : 'text-white hover:text-gold'}`}>
             Contact
           </a>
 
@@ -66,12 +66,16 @@ const Navbar: React.FC = () => {
           </a>
 
           {/* Continue on web app - NOW SECONDARY (Less Highlighted) */}
-          <button className={`px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-[0.1em] transition-all border ${scrolled
+          <a
+            href="https://khandarkar.com/explore"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-[0.1em] transition-all border ${scrolled
               ? 'border-[#1E3A8A] text-[#1E3A8A] hover:bg-[#1E3A8A]/5'
               : 'border-white/30 text-white hover:bg-white/10'
-            }`}>
+              }`}>
             Continue on web app
-          </button>
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}

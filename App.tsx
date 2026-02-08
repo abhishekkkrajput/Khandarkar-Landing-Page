@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import About from './components/About';
-import ProblemSolver from './components/ProblemSolver';
+
 import AppShowcase from './components/AppShowcase';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
@@ -32,9 +32,7 @@ const App: React.FC = () => {
           <About />
         </section>
 
-        <section id="problem" className="py-24 bg-white">
-          <ProblemSolver />
-        </section>
+
 
         <section id="app-showcase" className="py-24 bg-[#B6337D] text-white">
           <AppShowcase />
