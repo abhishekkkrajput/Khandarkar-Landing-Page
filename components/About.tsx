@@ -47,7 +47,7 @@ const About: React.FC = () => {
 
           <h2 className="text-4xl md:text-6xl font-serif text-[#1E3A8A] leading-[1.15]">
             Rooted in Kashmir, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#B8860B] italic">Guided by Faith</span>
+            <span className="text-gold-plated italic relative">Guided by Faith</span>
           </h2>
         </div>
 

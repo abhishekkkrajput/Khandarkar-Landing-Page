@@ -45,6 +45,27 @@
         body {
             font-family: 'Montserrat', sans-serif;
             scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 5px;
+            border: 2px solid #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B6337D;
         }
 
         .text-gold-gradient {
@@ -52,6 +73,34 @@
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shine 3s linear infinite;
+        }
+
+        /* PREMIUM GOLD PLATED EFFECT */
+        .text-gold-plated {
+            background: linear-gradient(to bottom,
+                    #F5E0A3 0%,
+                    #D4AF37 30%,
+                    #C5A028 60%,
+                    #B8860B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 2px 0px rgba(184, 134, 11, 0.3));
+            background-size: 100% auto;
+        }
+
+        @keyframes shine-metallic {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
         }
 
         .border-gold {
@@ -60,14 +109,16 @@
 
         .glass-dark {
             background: rgba(182, 51, 125, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .glass-light {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.90);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
         .scrollbar-hide::-webkit-scrollbar {
@@ -97,13 +148,13 @@
         }
 
         .animate-mobile-live {
-            animation: mobile-live-effect 4s ease-in-out infinite;
+            animation: mobile-live-effect 5s ease-in-out infinite;
         }
 
         @keyframes fade-slide-up {
             0% {
                 opacity: 0;
-                transform: translateY(10px);
+                transform: translateY(20px);
             }
 
             100% {
@@ -113,7 +164,23 @@
         }
 
         .animate-fade-slide-up {
-            animation: fade-slide-up 0.5s ease-out forwards;
+            animation: fade-slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
         }
     </style>
 </head>

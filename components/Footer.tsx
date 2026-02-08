@@ -2,86 +2,92 @@
 import React from 'react';
 import { Mail, MapPin, Instagram, Facebook, Twitter, Youtube, Heart } from 'lucide-react';
 import { WalnutPattern } from '../constants';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer id="footer" className="relative bg-[#1A1A1A] text-white pt-24 pb-12 overflow-hidden border-t-4 border-[#D4AF37]">
+    <footer id="footer" className="relative bg-[#1A1A1A] text-white pt-20 pb-10 overflow-hidden border-t-4 border-[#D4AF37]">
       {/* Decorative Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay">
         <WalnutPattern />
       </div>
 
       {/* Gold Glow Overlay */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-1 bg-[#D4AF37] blur-[50px] opacity-50"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-1 bg-[#D4AF37] blur-[60px] opacity-40"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
-          {/* Column 1: Brand & Contact */}
-          <div className="space-y-6">
-            <h4 className="text-2xl font-cinzel text-[#D4AF37] mb-6">KhandarKar</h4>
+          {/* Column 1: Reach Us */}
+          <div>
+            <h4 className="text-lg font-bold text-white mb-6">Reach us</h4>
             <div className="space-y-4">
-              <div className="flex items-start gap-4 group">
-                <div className="mt-1 w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-all">
+              <div className="flex items-center gap-3 group">
+                <div className="w-5 h-5 flex items-center justify-center">
                   <Mail className="w-4 h-4 text-[#D4AF37]" />
                 </div>
-                <div className="flex flex-col">
-                  <span className="text-xs text-gray-400 uppercase tracking-wider mb-1">Email Us</span>
-                  <a href="mailto:contact@khandarkar.com" className="text-white hover:text-[#D4AF37] transition-colors">contact@khandarkar.com</a>
-                </div>
+                <a href="mailto:contact@khandarkar.com" className="text-gray-400 hover:text-white transition-colors text-sm">contact@khandarkar.com</a>
               </div>
 
-              <div className="flex items-start gap-4 group">
-                <div className="mt-1 w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-all">
+              <div className="flex items-center gap-3 group">
+                <div className="w-5 h-5 flex items-center justify-center">
                   <MapPin className="w-4 h-4 text-[#D4AF37]" />
                 </div>
-                <div className="flex flex-col">
-                  <span className="text-xs text-gray-400 uppercase tracking-wider mb-1">Headquarters</span>
-                  <span className="text-white">The Valley of Saints,<br />Kashmir, 190001</span>
-                </div>
+                <span className="text-gray-400 text-sm">Srinagar, Kashmir</span>
               </div>
             </div>
           </div>
 
-          {/* Column 2: Quick Links */}
+          {/* Column 2: Follow Us */}
           <div>
-            <h4 className="text-lg font-serif text-white mb-8 border-b border-[#D4AF37]/30 pb-2 inline-block">Quick Links</h4>
-            <ul className="space-y-4 text-gray-300 text-sm">
-              <li><a href="#hero" className="hover:text-[#D4AF37] hover:translate-x-1 transition-all inline-block">Home</a></li>
-              <li><a href="https://khandarkar.com/about" className="hover:text-[#D4AF37] hover:translate-x-1 transition-all inline-block">About Us</a></li>
-              <li><a href="https://khandarkar.com/features" className="hover:text-[#D4AF37] hover:translate-x-1 transition-all inline-block">Premium Features</a></li>
-              <li><a href="https://khandarkar.com/contact" className="hover:text-[#D4AF37] hover:translate-x-1 transition-all inline-block">Contact Support</a></li>
+            <h4 className="text-lg font-bold text-white mb-6">Follow Us</h4>
+            <ul className="space-y-4">
+              <li>
+                <a href="https://www.instagram.com/khandarkar_com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group text-sm">
+                  <Instagram className="w-5 h-5 text-[#E4405F] group-hover:scale-110 transition-transform" />
+                  <span>Instagram</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/people/Khandarkar/61581174521661/?rdid=QuMlgeprq6HzuExi&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17YXf8PNgJ%2F" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group text-sm">
+                  <Facebook className="w-5 h-5 text-[#1877F2] group-hover:scale-110 transition-transform" />
+                  <span>Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://x.com/khandarkar_com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group text-sm">
+                  <Twitter className="w-5 h-5 text-[#1DA1F2] group-hover:scale-110 transition-transform" />
+                  <span>Twitter</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@khandar_kar" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group text-sm">
+                  <Youtube className="w-5 h-5 text-[#FF0000] group-hover:scale-110 transition-transform" />
+                  <span>YouTube</span>
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Column 3: Legal */}
           <div>
-            <h4 className="text-lg font-serif text-white mb-8 border-b border-[#D4AF37]/30 pb-2 inline-block">Legal</h4>
-            <ul className="space-y-4 text-gray-300 text-sm">
-              <li><a href="https://khandarkar.com/privacy" className="hover:text-[#D4AF37] hover:translate-x-1 transition-all inline-block">Privacy Policy</a></li>
-              <li><a href="https://khandarkar.com/terms" className="hover:text-[#D4AF37] hover:translate-x-1 transition-all inline-block">Terms & Guidelines</a></li>
-              <li><a href="https://khandarkar.com/safety" className="hover:text-[#D4AF37] hover:translate-x-1 transition-all inline-block">Safety Tips</a></li>
-              <li><a href="https://khandarkar.com/community" className="hover:text-[#D4AF37] hover:translate-x-1 transition-all inline-block">Community Standards</a></li>
+            <h4 className="text-lg font-bold text-white mb-6">Legal</h4>
+            <ul className="space-y-4 text-gray-400 text-sm">
+              <li><Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="hover:text-white transition-colors">Terms & Services</Link></li>
             </ul>
           </div>
 
-          {/* Column 4: Socials */}
+          {/* Column 4: Quick Links */}
           <div>
-            <h4 className="text-lg font-serif text-white mb-8 border-b border-[#D4AF37]/30 pb-2 inline-block">Join Our Community</h4>
-            <p className="text-gray-400 text-sm mb-6 leading-relaxed">Stay connected with us on social media for heartfelt stories and updates.</p>
-            <div className="flex gap-4">
-              {[
-                { icon: Instagram, color: '#E4405F', name: 'Instagram' },
-                { icon: Facebook, color: '#1877F2', name: 'Facebook' },
-                { icon: Twitter, color: '#1DA1F2', name: 'Twitter' },
-                { icon: Youtube, color: '#FF0000', name: 'YouTube' }
-              ].map((social, idx) => (
-                <a key={idx} href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:scale-110 transition-all group" aria-label={social.name}>
-                  <social.icon className="w-4 h-4 text-gray-400 group-hover:text-black transition-colors" />
-                </a>
-              ))}
-            </div>
+            <h4 className="text-lg font-bold text-white mb-6">Quick Links</h4>
+            <ul className="space-y-4 text-gray-400 text-sm">
+              <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+            </ul>
           </div>
+
         </div>
 
         {/* Bottom Bar */}
@@ -91,9 +97,9 @@ const Footer: React.FC = () => {
           </p>
 
           <div className="flex items-center gap-2 text-xs text-gray-500 tracking-widest uppercase">
-            <span>Handcrafted with</span>
+            <span>Handcrafted in</span>
             <Heart className="w-3 h-3 text-red-500 fill-red-500 animate-pulse" />
-            <span>in Kashmir</span>
+            <span>Kashmir</span>
           </div>
         </div>
       </div>
