@@ -3,29 +3,30 @@ import React from 'react';
 
 const CultureStrip: React.FC = () => {
   const items = [
-    { name: "Chinar Leaves", icon: "🍁" },
-    { name: "Shikaras", icon: "⛵" },
-    { name: "Hazratbal", icon: "🕌" },
-    { name: "Snowfall", icon: "❄️" },
-    { name: "Nishat Garden", icon: "⛲" },
-    { name: "Tilla Embroidery", icon: "🧵" },
-    { name: "Walnut Carving", icon: "🪵" }
+    { name: "SHIKARAS", icon: "⛵" },
+    { name: "HAZRATBAL", icon: "🕌" },
+    { name: "NISHAT GARDEN", icon: "⛲" },
+    { name: "TILLA EMBROIDERY", icon: "🧵" }
   ];
 
   return (
-    <div className="relative py-12 bg-white overflow-hidden border-y border-[#D4AF37]/20">
+    <div className="relative py-14 bg-white overflow-hidden border-y border-gray-100 shadow-sm">
+      {/* Marquee Container */}
       <div className="flex whitespace-nowrap animate-marquee">
-        {[...items, ...items, ...items].map((item, i) => (
-          <div key={i} className="flex items-center mx-12">
-            <span className="text-4xl mr-4">{item.icon}</span>
-            <span className="text-xl font-serif text-[#064E3B] uppercase tracking-[0.2em]">{item.name}</span>
+        {[...items, ...items, ...items, ...items].map((item, i) => (
+          <div key={i} className="flex items-center mx-16">
+            <span className="text-3xl mr-5 drop-shadow-sm filter saturate-150">{item.icon}</span>
+            <span className="text-lg font-serif text-[#B6337D] font-bold uppercase tracking-[0.25em]">{item.name}</span>
           </div>
         ))}
       </div>
       
+      {/* Central Floating Badge */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="bg-white/80 backdrop-blur-sm px-10 py-2 border border-[#D4AF37] rounded-full shadow-2xl">
-            <span className="text-gold font-cinzel tracking-widest text-sm font-bold uppercase">✨ A Celebration of Our Heritage</span>
+          <div className="bg-white px-10 py-3 border border-[#D4AF37] rounded-full shadow-[0_10px_40px_rgba(212,175,55,0.2)] flex items-center gap-3">
+            <span className="text-[#D4AF37] text-xs">✨</span>
+            <span className="text-[#D4AF37] font-cinzel tracking-[0.3em] text-[10px] font-black uppercase">A Celebration of Our Heritage</span>
+            <span className="text-[#D4AF37] text-xs">✨</span>
           </div>
       </div>
 
@@ -35,7 +36,7 @@ const CultureStrip: React.FC = () => {
           100% { transform: translateX(-50%); }
         }
         .animate-marquee {
-          animation: marquee 40s linear infinite;
+          animation: marquee 50s linear infinite;
         }
       `}</style>
     </div>

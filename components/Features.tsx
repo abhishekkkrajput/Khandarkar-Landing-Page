@@ -30,7 +30,7 @@ const Features: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-6 relative">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-serif text-[#064E3B] mb-4 uppercase tracking-wider">Why Khandarkar</h2>
+        <h2 className="text-4xl md:text-5xl font-serif text-[#B6337D] mb-4 uppercase tracking-wider">Why <span className="text-gold">Khandarkar</span></h2>
         <div className="h-1 w-24 gold-gradient mx-auto mb-6"></div>
         <p className="text-gray-600 max-w-2xl mx-auto">Beyond simple algorithms, we offer a bridge to a blessed future rooted in our heritage.</p>
       </div>
@@ -43,10 +43,10 @@ const Features: React.FC = () => {
             </div>
             
             <div className="relative z-10">
-                <div className="w-16 h-16 bg-[#064E3B] rounded-2xl flex items-center justify-center mb-6 shadow-xl transform rotate-3 transition-transform group-hover:rotate-0">
+                <div className="w-16 h-16 bg-[#B6337D] rounded-2xl flex items-center justify-center mb-6 shadow-xl transform rotate-3 transition-transform group-hover:rotate-0">
                     {f.icon}
                 </div>
-                <h3 className="text-xl font-bold text-[#4A2F22] mb-4 leading-tight group-hover:text-[#064E3B] transition-colors">
+                <h3 className="text-xl font-bold text-[#4A2F22] mb-4 leading-tight group-hover:text-[#B6337D] transition-colors">
                     {f.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-sm">

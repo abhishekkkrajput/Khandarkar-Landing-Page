@@ -2,18 +2,18 @@
 import React from 'react';
 
 export const COLORS = {
-  emerald: '#064E3B',
+  primary: '#B6337D', // Magenta/Plum from user image
   walnut: '#4A2F22',
   gold: '#D4AF37',
+  goldLight: '#F5E0A3',
   pink: '#EDD6DF',
   white: '#FFFFFF',
   mist: '#F4F4F4'
 };
 
 export const ChinarLeafIcon = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 100 100" className={className} fill="currentColor">
-    <path d="M50 5C52 15 45 25 50 35C55 25 48 15 50 5ZM30 20C35 30 25 40 30 50C35 40 25 30 30 20ZM70 20C75 30 65 40 70 50C75 40 65 30 70 20ZM15 45C25 55 15 65 20 75C25 65 15 55 15 45ZM85 45C95 55 85 65 80 75C75 65 85 55 85 45ZM50 95V60M35 75C40 85 30 95 35 100M65 75C60 85 70 95 65 100" stroke="currentColor" strokeWidth="1" />
-    <path d="M50 5L53 15L65 10L62 22L75 20L70 32L85 35L75 45L80 57L68 53L65 65L55 58L50 70L45 58L35 65L32 53L20 57L25 45L15 35L30 32L25 20L38 22L35 10L47 15L50 5Z" />
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 22C12 22 11.5 18 11.5 17C10.5 17.5 9.5 18.5 8 18.5C8.5 17 8 16 7 15.5C5.5 16 4 16 3 15C4.5 14 5 13 5 12C4 11.5 2 11 1 9C3 9 4.5 9.5 5.5 10.5C6 9 6.5 7.5 8 6C8 7.5 8.5 8.5 9.5 9C10 7.5 10.5 4 12 2C13.5 4 14 7.5 14.5 9C15.5 8.5 16 7.5 16 6C17.5 7.5 18 9 18.5 10.5C19.5 9.5 21 9 23 9C22 11 20 11.5 19 12C19 13 19.5 14 21 15C20 16 18.5 16 17 15.5C16 16 15.5 17 16 18.5C14.5 18.5 13.5 17.5 12.5 17C12.5 18 12 22 12 22Z" />
   </svg>
 );
 
